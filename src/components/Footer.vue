@@ -25,7 +25,7 @@
 <script>
 import { Tabbar, TabbarItem } from 'vux'
 export default {
-  name: 'Footer',
+  name: 'AppFooter',
   components: {
     Tabbar,
     TabbarItem
