@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tabbar>
+    <tabbar id="m-tabbar">
       <tabbar-item>
         <img slot="icon" src="../../static/icon/home.png">
         <span slot="label">Home</span>
@@ -17,6 +17,11 @@
   </div>
 </template>
 <style>
+#m-tabbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 .add {
   height: 80px;
   width: 80px;
