@@ -11,9 +11,10 @@
 </template>
 
 <script>
-import AppHeader from './components/Header'
-import AppFooter from './components/Footer'
-import Bus from './components/bus'
+import AppHeader from '@/components/Header'
+import AppFooter from '@/components/Footer'
+import Bus from '@/utils/bus'
+
 export default {
   name: 'app',
   components: {
@@ -23,14 +24,14 @@ export default {
   data () {
     return {}
   },
+  mounted: function () {
+    Bus.$on('click-on-card', function () {
+      console.log('receive-from-home')
+    })
+  },
   methods: {
     setPage: function (pageName) {
       console.log(pageName)
-    },
-    created () {
-      Bus.$on('aaa', (pageName) => {
-        console.log('App.vue')
-      })
     }
   }
 }

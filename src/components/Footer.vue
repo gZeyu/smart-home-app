@@ -1,15 +1,15 @@
 <template>
   <div>
     <tabbar id="m-tabbar">
-      <tabbar-item>
+      <tabbar-item selected :link="homePath">
         <img slot="icon" src="../../static/icon/home.png">
         <span slot="label">Home</span>
       </tabbar-item>
-      <tabbar-item show-dot>
+      <tabbar-item show-dot :link="explorePath">
         <img slot="icon" src="../../static/icon/find.png">
         <span slot="label">Explore</span>
       </tabbar-item>
-      <tabbar-item selected link="/component/demo">
+      <tabbar-item :link="userhomePath">
         <img slot="icon" src="../../static/icon/user.png">
         <span slot="label">User</span>
       </tabbar-item>
@@ -37,6 +37,9 @@ export default {
   },
   data () {
     return {
+      homePath: '/',
+      explorePath: '/Explore',
+      userhomePath: '/User',
       msg: ''
     }
   }

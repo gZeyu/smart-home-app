@@ -2,6 +2,7 @@
   <div id = "home">
     <div id="home-row" v-for="i in 2" :key="i">
       <div id="home-card" style="margin: 10px;overflow: hidden;" v-for="j in 2" :key="j" v-on:click="clickHomeCard(j)">
+        <router-link :to="cardList[(i-1)*2 + (j-1)].path">
         <masker style="border-radius: 2px;" :opacity=0.1 >
           <div class="m-img" :style="{backgroundImage: 'url(' + cardList[(i-1)*2 + (j-1)].img + ')'}"></div>
           <div slot="content" class="m-title">
@@ -10,6 +11,7 @@
             {{cardList[(i-1)*2 + (j-1)].titleEnglish}}
           </div>
         </masker>
+        </router-link>
       </div>
     </div>
   </div>  
@@ -17,42 +19,43 @@
 <script>
 
 import { Masker } from 'vux'
-import Bus from './bus'
+import Bus from '@/utils/bus'
+
 export default {
   components: {
     Masker
   },
   data () {
     return {
+      path: '/HelloFromVux',
       pageName: 'Home',
       cardList: [{
         titleChinese: '智能安防',
         titleEnglish: 'Intelligent Security',
-        img: '/../../static/img/intelligent_security.png'
+        img: '/../../static/img/intelligent_security.png',
+        path: '/HelloFromVux'
       }, {
         titleChinese: '智能家电',
         titleEnglish: 'Smart Appliances',
-        img: '/../../static/img/smart_appliances.png'
+        img: '/../../static/img/smart_appliances.png',
+        path: '/HelloWorld'
       }, {
         titleChinese: '传感系统',
         titleEnglish: 'Sensing System',
-        img: '/../../static/img/sensing_system.png'
+        img: '/../../static/img/sensing_system.png',
+        path: '/HelloFromVux'
       }, {
         titleChinese: '电量控制',
         titleEnglish: 'Power Monitoring',
-        img: '/../../static/img/power_monitoring.png'
+        img: '/../../static/img/power_monitoring.png',
+        path: '/HelloWorld'
       }]
     }
   },
   methods: {
     clickHomeCard: function (pageName) {
-      console.log('Home.vue ' + pageName)
-      Bus.$emit('aaa', 'aaa')
-    },
-    mounted () {
-      Bus.$on('aaa', (pageName) => {
-        console.log('Home.vue get click-home-card')
-      })
+      console.log('emit-to-app')
+      Bus.$emit('click-on-card')
     }
   }
 }
