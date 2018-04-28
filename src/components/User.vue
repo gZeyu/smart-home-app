@@ -76,6 +76,11 @@ export default {
 </script>  
 
 <style lang="less">
+#user-card {
+  margin: 10px;
+  overflow: hidden;
+}
+
 .user-card-img {
   padding-bottom: 50%;
   display: block;
@@ -87,20 +92,18 @@ export default {
   border-radius: 2px;
 }
 
-#user-card {
-  margin: 10px;
-  overflow: hidden;
-}
 .user-card-container {
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 .user-profile img {
   border-radius: 50%;
   border: 4px solid #ececec;
 }
+
 .user-profile {
   margin: 10px;
 }

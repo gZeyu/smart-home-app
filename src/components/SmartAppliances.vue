@@ -4,14 +4,12 @@
       <router-link :to="item.path">
         <masker style="border-radius: 2px;" :opacity=0.1>
           <div class="smart-appliances-card-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
-          <div slot="content">
-            <div class="smart-appliances-card-title">
-              <div>
-                <img :src="item.icon" />
-              </div>
-              <div>
-                {{item.title.chinese}}
-              </div>
+          <div slot="content" class="smart-appliances-card-container">
+            <div class="smart-appliances-card-icon">
+              <img :src=" item.icon " />
+            </div>
+            <div class="smart-appliances-card-title ">
+              {{item.title.chinese}}
             </div>
           </div>
         </masker>
@@ -73,6 +71,10 @@ export default {
 </script>  
 
 <style lang="less">
+#smart-appliances-card {
+  margin: 10px;
+  overflow: hidden;
+}
 .smart-appliances-card-img {
   padding-bottom: 40%;
   display: block;
@@ -83,32 +85,26 @@ export default {
   cursor: pointer;
   border-radius: 2px;
 }
-
-.smart-appliances-card-title {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-  font-weight: 500;
-  font-size: 16px;
-  position: absolute;
+.smart-appliances-card-container {
+  position: relative;
+  top: 15%;
+  bottom: 15%;
   left: 0;
-  right: 0;
-  width: 100%;
-  text-align: left;
-  padding: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 20%;
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
 
-#smart-appliances-card {
-  // margin: auto;
-  // padding: 10px;
-  // width: 85%;
-  // height: 50%;
-  // bottom: 50%;
-  // float: 1;
+.smart-appliances-card-icon img {
   margin: 10px;
-  overflow: hidden;
+}
+
+.smart-appliances-card-title {
+  color: white;
+  font-size: 5;
 }
 </style>
 
