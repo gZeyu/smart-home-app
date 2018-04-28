@@ -37,29 +37,29 @@ export default {
         title: {
           chinese: '智慧照明'
         },
-        img: '/static/img/smart_lighting.png',
-        icon: '/static/icon/smart_lighting.png',
+        img: './static/img/smart_lighting.png',
+        icon: './static/icon/smart_lighting.png',
         path: '/HelloFromVux'
       }, {
         title: {
           chinese: '家庭影院'
         },
-        img: '/static/img/home_theater.png',
-        icon: '/static/icon/home_theater.png',
+        img: './static/img/home_theater.png',
+        icon: './static/icon/home_theater.png',
         path: '/Home/SmartAppliances'
       }, {
         title: {
           chinese: '日用电器'
         },
-        img: '/static/img/daily_appliances.png',
-        icon: '/static/icon/daily_appliances.png',
+        img: './static/img/daily_appliances.png',
+        icon: './static/icon/daily_appliances.png',
         path: '/HelloFromVux'
       }, {
         title: {
           chinese: '智慧照明'
         },
-        img: '/static/img/smart_lighting.png',
-        icon: '/static/icon/smart_lighting.png',
+        img: './static/img/smart_lighting.png',
+        icon: './static/icon/smart_lighting.png',
         path: '/HelloFromVux'
       }]
     }
@@ -71,6 +71,7 @@ export default {
 </script>  
 
 <style lang="less">
+
 .smart-appliances-card {
   margin: 10px;
   overflow: hidden;

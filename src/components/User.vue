@@ -57,15 +57,15 @@ export default {
       headerTitle: '个人中心',
       user: {
         name: '互联网+',
-        userProfileCircle: '/static/img/user_profile_circle.png',
-        userProfileRectangular: '/static/img/user_profile_rectangular.png'
+        userProfileCircle: './static/img/user_profile_circle.png',
+        userProfileRectangular: './static/img/user_profile_rectangular.png'
       },
       deviceNumber: '18',
       icon: {
-        device: '/static/icon/device.png',
-        scene: '/static/icon/scene.png',
-        store: '/static/icon/store.png',
-        setting: '/static/icon/setting.png'
+        device: './static/icon/device.png',
+        scene: './static/icon/scene.png',
+        store: './static/icon/store.png',
+        setting: './static/icon/setting.png'
       }
     }
   },
@@ -76,9 +76,11 @@ export default {
 </script>  
 
 <style lang="less">
+
 #user-card {
   margin: 10px;
   overflow: hidden;
+  border-radius:10px;
 }
 
 .user-card-img {

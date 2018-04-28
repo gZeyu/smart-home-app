@@ -1,7 +1,7 @@
 <template>
   <div id="home">
-    <div class="home-row" v-for="i in 2" :key="i">
-      <div class="home-card" v-for="j in 2" :key="j">
+    <div id="home-row" v-for="i in 2" :key="i">
+      <div id="home-card" v-for="j in 2" :key="j">
         <router-link :to="cardList[(i-1)*2 + (j-1)].path">
           <masker style="border-radius: 2px;" :opacity=0.1>
             <div class="home-card-img" :style="{backgroundImage: 'url(' + cardList[(i-1)*2 + (j-1)].img + ')'}"></div>
@@ -32,28 +32,28 @@ export default {
           chinese: '智能安防',
           english: 'Intelligent Security'
         },
-        img: '/static/img/intelligent_security.png',
+        img: './static/img/intelligent_security.png',
         path: '/HelloFromVux'
       }, {
         title: {
           chinese: '智能家电',
           english: 'Smart Appliances'
         },
-        img: '/static/img/smart_appliances.png',
+        img: './static/img/smart_appliances.png',
         path: '/Home/SmartAppliances'
       }, {
         title: {
           chinese: '传感系统',
           english: 'Sensing System'
         },
-        img: '/static/img/sensing_system.png',
+        img: './static/img/sensing_system.png',
         path: '/HelloFromVux'
       }, {
         title: {
           chinese: '电量控制',
           english: 'Power Monitoring'
         },
-        img: '/static/img/power_monitoring.png',
+        img: './static/img/power_monitoring.png',
         path: '/HelloWorld'
       }]
     }
@@ -65,6 +65,20 @@ export default {
 </script>  
 
 <style lang="less">
+
+#home-card {
+  margin: 10px;
+  overflow: hidden;
+  border-radius:10px;
+  width: 50%;
+  height: 50%;
+  bottom: 50%;
+  flex: 1;
+}
+
+#home-row {
+  display: flex;
+}
 .home-card-img {
   padding-bottom: 160%;
   display: block;
@@ -89,18 +103,5 @@ export default {
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.home-row {
-  display: flex;
-}
-.home-card {
-  border-radius:10px;
-  margin: 10px;
-  overflow: hidden;
-  width: 50%;
-  height: 50%;
-  bottom: 50%;
-  flex: 1;
 }
 </style>

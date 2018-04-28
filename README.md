@@ -1,12 +1,10 @@
 # smart-home-app
 
-A smart home webapp demo
-
 > A Vue.js project
 
 ## Build Setup
 
-```bash
+``` bash
 # install dependencies
 npm install
 
