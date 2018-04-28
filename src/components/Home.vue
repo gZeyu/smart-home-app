@@ -32,28 +32,28 @@ export default {
           chinese: '智能安防',
           english: 'Intelligent Security'
         },
-        img: '/../../static/img/intelligent_security.png',
+        img: '/static/img/intelligent_security.png',
         path: '/HelloFromVux'
       }, {
         title: {
           chinese: '智能家电',
           english: 'Smart Appliances'
         },
-        img: '/../../static/img/smart_appliances.png',
+        img: '/static/img/smart_appliances.png',
         path: '/Home/SmartAppliances'
       }, {
         title: {
           chinese: '传感系统',
           english: 'Sensing System'
         },
-        img: '/../../static/img/sensing_system.png',
+        img: '/static/img/sensing_system.png',
         path: '/HelloFromVux'
       }, {
         title: {
           chinese: '电量控制',
           english: 'Power Monitoring'
         },
-        img: '/../../static/img/power_monitoring.png',
+        img: '/static/img/power_monitoring.png',
         path: '/HelloWorld'
       }]
     }

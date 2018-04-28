@@ -2,15 +2,15 @@
   <div>
     <tabbar id="m-tabbar">
       <tabbar-item selected :link="homePath">
-        <img slot="icon" src="../../static/icon/home.png">
+        <img slot="icon" src="/static/icon/home.png">
         <span slot="label">Home</span>
       </tabbar-item>
       <tabbar-item show-dot :link="explorePath">
-        <img slot="icon" src="../../static/icon/find.png">
+        <img slot="icon" src="/static/icon/find.png">
         <span slot="label">Explore</span>
       </tabbar-item>
       <tabbar-item :link="userPath">
-        <img slot="icon" src="../../static/icon/user.png">
+        <img slot="icon" src="/static/icon/user.png">
         <span slot="label">User</span>
       </tabbar-item>
     </tabbar>
