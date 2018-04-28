@@ -9,7 +9,7 @@
         <img slot="icon" src="../../static/icon/find.png">
         <span slot="label">Explore</span>
       </tabbar-item>
-      <tabbar-item :link="userhomePath">
+      <tabbar-item :link="userPath">
         <img slot="icon" src="../../static/icon/user.png">
         <span slot="label">User</span>
       </tabbar-item>
@@ -37,9 +37,9 @@ export default {
   },
   data () {
     return {
-      homePath: '/',
+      homePath: '/Home',
       explorePath: '/Explore',
-      userhomePath: '/User',
+      userPath: '/User',
       msg: ''
     }
   }

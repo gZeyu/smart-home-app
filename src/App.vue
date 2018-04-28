@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-  <app-header></app-header>
-    <div class="container">
+    <app-header></app-header>
+    <div class="container" style="background-color:#f5f5f9;">
       <div>
         <router-view></router-view>
       </div>
     </div>
-  <app-footer></app-footer> 
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 import AppHeader from '@/components/Header'
 import AppFooter from '@/components/Footer'
-import Bus from '@/utils/bus'
 
 export default {
   name: 'app',
@@ -23,16 +22,6 @@ export default {
   },
   data () {
     return {}
-  },
-  mounted: function () {
-    Bus.$on('click-on-card', function () {
-      console.log('receive-from-home')
-    })
-  },
-  methods: {
-    setPage: function (pageName) {
-      console.log(pageName)
-    }
   }
 }
 </script>

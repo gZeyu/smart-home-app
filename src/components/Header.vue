@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-header id="m-header" :left-options="{backText: ''}">主菜单</x-header>
+    <x-header id="m-header" :left-options="{backText: ''}">{{headerTitle}}</x-header>
     <div v-transfer-dom>
       <actionsheet :menus="menus" v-model="showMenus" show-cancel></actionsheet>
     </div>
@@ -9,6 +9,7 @@
 
 <script>
 import { XHeader, Actionsheet, TransferDom, ButtonTab, ButtonTabItem } from 'vux'
+import Bus from '@/utils/bus'
 
 export default {
   name: 'AppHeader',
@@ -23,12 +24,19 @@ export default {
   },
   data () {
     return {
+      headerTitle: '主菜单',
       menus: {
         menu1: 'Take Photo',
         menu2: 'Choose from photos'
       },
       showMenus: false
     }
+  },
+  mounted: function () {
+    var self = this
+    Bus.$on('change-header-title', function (headerTitle) {
+      self.headerTitle = headerTitle
+    })
   }
 }
 </script>
