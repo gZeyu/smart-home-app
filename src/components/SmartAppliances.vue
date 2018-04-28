@@ -1,6 +1,6 @@
 <template>
   <div id="smart-appliances">
-    <div id="smart-appliances-card" v-for="(item, index) in cardList" :key="index">
+    <div class="smart-appliances-card" v-for="(item, index) in cardList" :key="index">
       <router-link :to="item.path">
         <masker style="border-radius: 2px;" :opacity=0.1>
           <div class="smart-appliances-card-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
@@ -71,9 +71,10 @@ export default {
 </script>  
 
 <style lang="less">
-#smart-appliances-card {
+.smart-appliances-card {
   margin: 10px;
   overflow: hidden;
+  border-radius:10px;
 }
 .smart-appliances-card-img {
   padding-bottom: 40%;

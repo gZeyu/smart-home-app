@@ -1,7 +1,7 @@
 <template>
   <div id="home">
-    <div id="home-row" v-for="i in 2" :key="i">
-      <div id="home-card" style="margin: 10px;overflow: hidden;" v-for="j in 2" :key="j">
+    <div class="home-row" v-for="i in 2" :key="i">
+      <div class="home-card" v-for="j in 2" :key="j">
         <router-link :to="cardList[(i-1)*2 + (j-1)].path">
           <masker style="border-radius: 2px;" :opacity=0.1>
             <div class="home-card-img" :style="{backgroundImage: 'url(' + cardList[(i-1)*2 + (j-1)].img + ')'}"></div>
@@ -91,10 +91,13 @@ export default {
   transform: translateY(-50%);
 }
 
-#home-row {
+.home-row {
   display: flex;
 }
-#home-card {
+.home-card {
+  border-radius:10px;
+  margin: 10px;
+  overflow: hidden;
   width: 50%;
   height: 50%;
   bottom: 50%;
