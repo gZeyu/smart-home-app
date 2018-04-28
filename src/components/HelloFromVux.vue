@@ -2,36 +2,15 @@
 
   <div>
     <div class="vux-demo">
-      <img class="logo" src="../assets/vux_logo.png">
-      <h1> </h1>
+      <div>
+        <img :src="img" />
+      </div>
+      <div>
+        <br/>
+        <font size="6" color="gray">开发中敬请期待</font>
+        <font size="6" color="gray">......</font>
+      </div>
     </div>
-    <group title="cell demo">
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-    </group>
-    <group title="cell demo">
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-    </group>
-    <group title="cell demo">
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-      <cell title="VUX" value="cool" is-link></cell>
-    </group>
   </div>
 </template>
 
@@ -45,10 +24,7 @@ export default {
   },
   data () {
     return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
+      img: './static/img/developing.gif',
       msg: 'Hello World!'
     }
   }
@@ -58,9 +34,6 @@ export default {
 <style>
 .vux-demo {
   text-align: center;
-}
-.logo {
-  width: 100px;
-  height: 100px;
+  margin: 5%;
 }
 </style>

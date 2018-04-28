@@ -3,12 +3,14 @@
 import Vue from 'vue'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
-import App from './App'
-import Home from './components/Home'
 import HelloFromVux from './components/HelloFromVux'
 import HelloWorld from './components/HelloWorld'
-import SmartAppliances from './components/SmartAppliances'
+import App from './App'
+import Home from './components/Home'
 import User from './components/User'
+import SmartAppliances from './components/SmartAppliances'
+import DailyAppliances from './components/DailyAppliances'
+import AirConditioner from './components/AirConditioner'
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,6 +25,14 @@ const routes = [
   {
     path: '/Home/SmartAppliances',
     component: SmartAppliances
+  },
+  {
+    path: '/Home/SmartAppliances/DailyAppliances',
+    component: DailyAppliances
+  },
+  {
+    path: '/Home/SmartAppliances/DailyAppliances/AirConditioner',
+    component: AirConditioner
   },
   {
     path: '/Explore',

@@ -54,7 +54,7 @@ export default {
   },
   data () {
     return {
-      headerTitle: '个人中心',
+      headerTitle: '客厅空调',
       user: {
         name: '互联网+',
         userProfileCircle: './static/img/user_profile_circle.png',

@@ -46,14 +46,14 @@ export default {
         },
         img: './static/img/home_theater.png',
         icon: './static/icon/home_theater.png',
-        path: '/Home/SmartAppliances'
+        path: '/HelloFromVux'
       }, {
         title: {
           chinese: '日用电器'
         },
         img: './static/img/daily_appliances.png',
         icon: './static/icon/daily_appliances.png',
-        path: '/HelloFromVux'
+        path: '/Home/SmartAppliances/DailyAppliances'
       }, {
         title: {
           chinese: '智慧照明'
@@ -71,11 +71,10 @@ export default {
 </script>  
 
 <style lang="less">
-
 .smart-appliances-card {
   margin: 10px;
   overflow: hidden;
-  border-radius:10px;
+  border-radius: 10px;
 }
 .smart-appliances-card-img {
   padding-bottom: 40%;

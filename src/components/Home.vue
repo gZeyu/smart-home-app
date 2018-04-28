@@ -54,7 +54,7 @@ export default {
           english: 'Power Monitoring'
         },
         img: './static/img/power_monitoring.png',
-        path: '/HelloWorld'
+        path: '/HelloFromVux'
       }]
     }
   },
@@ -65,11 +65,10 @@ export default {
 </script>  
 
 <style lang="less">
-
 #home-card {
   margin: 10px;
   overflow: hidden;
-  border-radius:10px;
+  border-radius: 10px;
   width: 50%;
   height: 50%;
   bottom: 50%;
