@@ -72,7 +72,7 @@ export default {
           up: './static/icon/up.png',
           down: './static/icon/down.png'
         },
-        path: '/HelloFromVux'
+        path: '/Home/SmartAppliances/DailyAppliances/AirConditioner'
       }]
     }
   },
